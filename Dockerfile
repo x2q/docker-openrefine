@@ -2,7 +2,7 @@ FROM ubuntu
 MAINTAINER Michael J. Cohen, mjc@kernel.org
 RUN apt-get update -qq
 # software-properties-common on 12.10+
-RUN apt-get install -qq -y python-software-properties
+RUN apt-get install -qq -y python-software-properties software-properties-common
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update -qq
 RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
