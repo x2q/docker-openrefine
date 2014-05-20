@@ -5,17 +5,17 @@ Dockerfile for running OpenRefine.
 
 To start it:
 
-Make a container you can use to host your data.
+Make a container you can use to host your data
 ```
-docker run -v /data/openrefine -name data-openrefine busybox true
+docker run -v /data/openrefine --name data-openrefine busybox true
 ```
 
-Build your openrefine container.
+Build your openrefine container
 ```
-docker build -t openrefine github.com/mjc/docker-openrefine
+docker build -t openrefine github.com/x2q/docker-openrefine
 ```
 
 Run your openrefine container
 ```
-docker run --volumes-from data-openrefine -p 3333 -name openrefine openrefine
+docker run --volumes-from data-openrefine -p 33333 --name openrefine openrefine
 ```
